@@ -25,4 +25,6 @@ class NeuralNet(object):
         input = cv2.resize(Image, (28 , 28)).reshape((28 , 28,1)).astype('float32') / 255
         # Predicting the Test set results
         y_pred = model.predict_classes(np.array([input]))
-        print(y_pred)
+        os.system("cls")
+        print("Digit Predicted as: {}".format(y_pred[0]))
+        return y_pred

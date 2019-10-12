@@ -50,6 +50,6 @@ while(True):
         canvas[100:500,100:500] = 0
     elif key == ord('p'):
         image = canvas[100:500,100:500]
-        net.predict(image)
+        digit_predict = net.predict(image)
 
 cv2.destroyAllWindows()
