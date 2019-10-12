@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from pridict_test import NeuralNet
+from predict_test import NeuralNet
 
 net = NeuralNet()
 
@@ -37,17 +37,18 @@ def on_mouse_events(event,x,y,flags,params):
 cv2.namedWindow("Test Canvas")
 cv2.setMouseCallback("Test Canvas", on_mouse_events)
 
-print("Running Canvas...")
 
+print("Running Canvas...")
 while(True):
     cv2.imshow("Test Canvas", canvas)
     key = cv2.waitKey(1) & 0xFF 
+
     if key == ord('q'):
         break
-    elif key == ord('s'):
-        is_drawing = True
+
     elif key == ord('c'):
         canvas[100:500,100:500] = 0
+
     elif key == ord('p'):
         image = canvas[100:500,100:500]
         digit_predict = net.predict(image)

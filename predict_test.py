@@ -27,4 +27,4 @@ class NeuralNet(object):
         y_pred = model.predict_classes(np.array([input]))
         os.system("cls")
         print("Digit Predicted as: {}".format(y_pred[0]))
-        return y_pred
+        return y_pred[0]
