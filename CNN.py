@@ -48,13 +48,13 @@ class CNN(object):
                 print("Failed to create the folder, try running the code again after creating 'models' folder in same directory!")
             else:
                 print("Folder created successfully!")
-                self.model.save('models/mnistCNN.h5')
-                print("Model Saved!")
 
+
+        self.model.save('models/mnistCNN.h5')
+        print("Model Saved!")
 
 if __name__ == "__main__":
     os.system("cls")
-    print("Ready to build your CNN, hit return to start...")
-    input()
+    input("Ready to build your CNN, hit return to start...")
     print("Building your Neural Net...")
     CNN_mod_1 = CNN()
